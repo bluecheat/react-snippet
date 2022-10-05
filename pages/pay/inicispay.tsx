@@ -23,7 +23,7 @@ const PayPage: NextPage = (props) => {
 		buyerEmail: 'test@test.com',
 		productPrice: 1000,
 		payStatus: 0,
-		returnUrl: 'http://localhost:3000/pay/inicispay',
+		returnUrl: 'http://localhost:3000/api/inicisresult',
 		closeUrl: 'http://localhost:3000/pay/inicisclose',
 	};
 
