@@ -20,6 +20,10 @@ Ckeditor의 경우 SSR을 지원하지 않는다라고 공식 문서에서 설�
 ```javascript
 <Editor initText={text}
         onChange={(newText) => setText(newText)}
+        options={{
+            minHeight: '200px', // default: inline
+            maxHeight: '500px', // default: infinite
+        }}
         uploadHandler={(file) => new Promise(resolve => {
             // 에디터 내 이미지 업로드 시 처리 방식 
             // ex: 이미지 업로드 API 요청
