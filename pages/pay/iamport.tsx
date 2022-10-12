@@ -1,15 +1,8 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import { IamportInit, IamportRequest } from '@/snippet/pay/iamport/utils';
-import useMounted from '@/hooks/useMounted';
+import Script from 'next/script';
 
 const IamPortPayPage: NextPage = (props) => {
-	const isMounted = useMounted();
-
-	// Next에서는 SSR 시 window 객체가 존재 하지 않기 때문에 아래와 같이 처리해야 함
-	if (isMounted) {
-		IamportInit(process.env.NEXT_PUBLIC_IAMPORT!);
-	}
 
 	const handlePay = async () => {
 		const result = await IamportRequest({
@@ -24,15 +17,16 @@ const IamPortPayPage: NextPage = (props) => {
 			buyer_addr: '서울시',
 			buyer_postcode: '023456',
 		});
-		console.log(result)
+		console.log(result);
 	};
 
 	return (
 		<div className='App'>
-			<Head>
-				<script type='text/javascript' src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
-				<script type='text/javascript' src='https://cdn.iamport.kr/js/iamport.payment-1.2.0.js'></script>
-			</Head>
+			<Script src='https://code.jquery.com/jquery-1.12.4.min.js'></Script>
+			{/*// Next에서는 SSR 시 window 객체가 존재 하지 않기 때문에 아래와 같이 처리해야 함*/}
+			<Script src='https://cdn.iamport.kr/js/iamport.payment-1.2.0.js' onLoad={() => {
+				IamportInit(process.env.NEXT_PUBLIC_IAMPORT!);
+			}}></Script>
 			<button onClick={() => handlePay()}>아임포트 결제</button>
 		</div>
 	);
