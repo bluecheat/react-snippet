@@ -8,6 +8,9 @@ yarn add jest jest-dom jest-environment-jsdom ts-jest babel-jest --dev
 
 // testing-library를 위한 모듈 설치
 yarn add @testing-library/user-event @testing-library/react-hooks @testing-library/react @testing-library/jest-dom @testing-library/dom --dev
+
+// component reander 를 위한 모듈 설치
+yarn add --dev react-test-renderer
 ```
 
 ## Jest Config 설정

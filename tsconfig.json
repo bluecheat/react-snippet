@@ -19,9 +19,10 @@
     "jsx": "preserve",
     "incremental": true,
     "noImplicitAny": false,
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "*"
+      "@/snippet/*": [
+        "snippet/*"
       ]
     }
   },
@@ -32,6 +33,6 @@
     "node_modules/ts-jest/globals.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
   ]
 }
