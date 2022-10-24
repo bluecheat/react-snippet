@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Counter from '../pages/example/Counter';
+import Counter from '../../pages/example/Counter';
 
 
 describe('<Counter / > test', () => {

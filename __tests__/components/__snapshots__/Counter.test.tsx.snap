@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter / > test matches snapshopt 1`] = `
+<div>
+  <div>
+    <h1>
+      Counter
+    </h1>
+    <h2>
+      0
+    </h2>
+    <button>
+      +
+    </button>
+    <button>
+      -
+    </button>
+  </div>
+</div>
+`;
