@@ -23,6 +23,9 @@
     "paths": {
       "@/snippet/*": [
         "snippet/*"
+      ],
+      "@/pages/*": [
+        "/pages/*"
       ]
     }
   },
