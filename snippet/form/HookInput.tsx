@@ -18,7 +18,7 @@ const HookInput: React.FC<HookInputProps> = ({ register, style, name, label, req
 	return (
 		<div>
 			<label htmlFor={name}>{label}</label>
-			<input type={'text'} style={style} id={name} {...register(name, { required })} {...props} />
+			<input style={style} id={name} {...register(name, { required })} {...props} />
 			{errors?.[name] && (
 				<div className='help is-danger' role='alert'>
 					{errors[name]?.message as string}
