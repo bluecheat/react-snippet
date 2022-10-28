@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from '@emotion/styled';
 
 const Counter: React.FC = () => {
 
@@ -15,7 +16,7 @@ const Counter: React.FC = () => {
 	return (
 		<div>
 			<h1>Counter</h1>
-			<h2>{count}</h2>
+			<StyledWrap>{count}</StyledWrap>
 			<button onClick={onIncrease}>+</button>
 			<button onClick={onDecrease}>-</button>
 		</div>
@@ -23,3 +24,10 @@ const Counter: React.FC = () => {
 };
 
 export default Counter;
+
+const StyledWrap = styled.h2`
+  background-color: hotpink;
+  div {
+    font-size: 24px;
+  }
+`;
